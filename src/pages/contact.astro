@@ -1,0 +1,64 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="contacto" title="Hablemos!" />
+
+  <ContactUs
+    id="form"
+    title="Dejanos un mensaje"
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nombre',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Mensaje',
+    }}
+    disclaimer={{
+      label:
+        'Al presionar este boton, acepto que mi informacion de contacto proveida pueda ser usada con diferentes fines',
+    }}
+    description="Nuestro equipo responde por lo regular en 24 horas"
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Estamos para brindar apoyo"
+    items={[
+      {
+        title: 'Telefono',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'alejandro.paisano5463@alumnos.udg.mx',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: '1234 Lorem Ipsum St, 12345, Jalisco, Mexico',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

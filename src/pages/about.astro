@@ -1,0 +1,36 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+    
+  >
+    <Fragment slot="title">
+      Conoce un poco de historia <br />
+      <span class="text-accent dark:text-white highlight"> De la era indsutrial</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Comos un pequeño equipo de escritores con el objetivo de dar a conocer algunos hechos rleacionados a la era victoriana, tanto avances como elementos que fueron basicos para
+      que la historia se pudiera desarrollar de la forma en la que lo hizo. Asi como tambien damos a conocer la situacion general que llevo a que dicho objeto apareciera.
+
+      Si aprendiste algo que no sabias, entonces nuestro objetivo esta cumplido
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+</Layout>

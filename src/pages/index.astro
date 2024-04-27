@@ -1,0 +1,257 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'La era industrial',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+
+    image={{ src: '~/assets/images/chimenea.jpg', alt: 'Chimenea industrial' }}
+  >
+    <Fragment slot="title">
+      Las invenciones <span class="hidden xl:inline">durante la</span>
+      <span class="text-accent dark:text-white highlight"> Era industrial</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">La era industrial</span> Un periodo que marcaria una gran era de cambios y desarrollos para el ser humano</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
+       Una era impulsada principalmente por la busqueda de nuevas fuentes de energia, el control de los gremios y la aparicion de una clase media
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Invenciones y Descubrimientos"
+    title="Elementos que cambiaron el mundo"
+    subtitle="Los mencionados a continuacion podrian considerarse los elementos vitales de la era industrial"
+    items={[
+      {
+        title: 'Carbon',
+        description:
+          'La fuente de energia principal que ayudo a impulsar la era industrial durante la mayor parte de su duracion',
+        icon: 'tabler:flame',
+      },
+      {
+        title: 'Dinamita',
+        description:
+          'A pesar de su poder destructivo, terminaria siendo una invencion clave debido a que facilitaria la extraccion de metales',
+        icon: 'tabler:bomb',
+      },
+      {
+        title: 'Anilina',
+        description:
+          'Un compuesto quimico que permitiria el producir una mayor cnatidad de colores artificiales, facilitando la produccion de tintes de alta calidad',
+        icon: 'tabler:rainbow',
+      },
+      {
+        title: 'Latas',
+        description:
+          'Una invencion sencilla que ayudaria a transportar comida a los lugares mas inhospitos del mundo y conservarla en muy buenas condiciones',
+        icon: 'tabler:bucket',
+      },
+      {
+        title: 'Telegrafo',
+        description:
+          "Un aparato conectado a un cable que permitia transmitir informacion en pequeños pulsos que luego podian ser interpretados para darles diferentes significados",
+        icon: 'tabler:phone-filled',
+      },
+      {
+        title: 'Fertilizante',
+        description:
+          'Una invencion que terminaria por salvar a Europa del mayor miedo que se vivio en esta epoca, la hambruna por sobrepoblacion',
+        icon: 'tabler:plant',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Curiosidades"
+    title="Datos curiosos relacionados a algunas invenciones y descubrimientos"
+    items={[
+      {
+        title: 'Inutilidad del carbon',
+        description:
+          'Durante la mayor parte de la historia humana, el carbon se veia como una piedra inutil',
+      },
+      {
+        title: 'El carbon como una solucion ecologica',
+        description:
+          'Aunque podria no parecerlo, el carbon fue una mejor solucion a continuar destruyendo los bosques europeos',
+      },
+      {
+        title: 'Problemas logisticos del carbon',
+        description:
+          'Debido a la baja eficiencia del motor de vapor inicial, era mas efectivo usar el carbon para extraer mas carbon que transportarlo a otras minas',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/carbon.jpg',
+      alt: 'motor de vapor',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Informacion corta acerca de algunos avances industriales</h3>
+       Incluso en este periodo, la ciencia y el estudio era algo arcaico y experimental
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Por que anilina',
+        description: `La gran razon por la que la anilina se volvio tan famosa, es por que en estos tiempos la unica forma de producir tintes requeria 
+        materiales de tierras lejanas y caras`,
+      },
+      {
+        title: 'El problema del abrelatas',
+        description:
+          'El abrelatas fue inventado depues que las latas, aun asi, en su origen las latas podrian ser abiertas con un cuchillo',
+      },
+      {
+        title: 'Telegrafos y calor',
+        description:
+          "Los telegrafos tenian como costumbre producir una enorme cantidad de calor, causando que necesitaran una sala separada de la casa si se usaban mucho",
+      },
+      {
+        title: 'Vapor e invenciones antiguas',
+        description:
+          'De forma peculiar, el motor de vapor ha sido inventado varias veces en la historia humana, aunque nunca se aprovecho en su totalidad hasta tiempos modernos',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/maquina-vapor.jpg',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+
+  <!-- Steps Widget ****************** -->
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Incluso las armas tuvieron su parte de detalles"
+    subtitle="Producir armas modernas se convirtio en un arte y una experimentacion tan curiosa como las maquinas de las indsutrias pesadas"
+    tagline="Components"
+    items={[
+      {
+        title: 'Riflado',
+        description: "Las primeras armas se enfrentaron a un problema enorme relacionado a su punteria, esto se pudo solucionar dibujando canales en el cañon del arma",
+        icon: 'tabler:spiral',
+      },
+      {
+        title: 'Municiones y desconfianza',
+        description:
+          "En su momento los generales creian que las municiones nuevas (aquellas que usamos hoy en dia) eran un riesgo enorme",
+        icon: 'tabler:stack',
+      },
+      {
+        title: 'Armas y maquinas de coser',
+        description:
+          'Una de las razones por las que las maquinas de coser son tan resilientes, es por que su creador se inspiro en las armas de fuego',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Alcohol y medicina',
+        description:
+          "Aunque a dia de hoy es conocimiento comun, en tiempos antiguos los medicos observaron que las gasas empapadas en alcoholes fuertes ayudaban a sanar heridos",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Salvando y condenando personas',
+        description:
+          'El inventor del fertilizante que tanto salvo a europa tambien creo el gas mostaza',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'El arte de crear armas',
+        description: 'Algo curioso que resulto del abandono de las espadas, es que con el tiempo las armas de fuego se convirtieron en armas decoradas y buscadas por su creador',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'La retirada de caballos',
+        description: 'El nacimiento de vehiculos modernos causo que los caballos perdieran lentamente su utilidad',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Lineas de produccion y entrenamiento',
+        description:
+          'Algo que compartian los ejercitos y la industria eran las lineas de produccion. En ambos casos se usaron lineas con un trabajador asignado a una tarea determinada, favoreciendo la rapides de dicha tarea',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Las carreras maritimas',
+        description: "Durante este periodo dio inicio la creacion de barcos con cascos de metal con fines militares. Pero debido a la falta de practica, la mayoria de barcos militares en su inicio eran pesqueros glorificados y con cañones extra",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display AstroWind documentation.
+                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
+                        Astro is a very interesting technology. Thanks.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- Stats Widget ****************** -->
+
+
+
+  <!-- CallToAction Widget *********** -->
+
+
+</Layout>
